@@ -4,6 +4,7 @@ Created on Wed Aug  9 17:58:38 2023
 
 @author: ayusman
 """
+# A spam filter using logistic regression and randomforest classifier 
 # importing necessary modules
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,9 +16,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, EN
 from nltk import word_tokenize
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
-
-
-
 
 # reading the data
 
@@ -51,14 +49,13 @@ log_reg = LogisticRegression()
 
 log_reg.fit(X_train, y_train)
 
-
 #prediction
 y_pred = log_reg.predict(X_test)
 
 #model_accuracy
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
-print(confusion_matrix(y_test, y_pred) / len(y_test))
+#print(confusion_matrix(y_test, y_pred) / len(y_test))
 
 
 # RandomForrest Based Classifier
