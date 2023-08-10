@@ -23,6 +23,7 @@ df_spam = pd.read_csv('Spam Data.csv')
 
 #print(df_spam)
 #print(df.info())
+# The data file had two columns, one the outcome variable and the one for the comments. The outcome variable categorized the data into spam and non spam
 
 # Building the vectorizer
 
